@@ -13,9 +13,18 @@ function characterCounter(str)
       charCount[char] = 1;
     }
   }
-  console.log(charCount);
+  return charCount;
 }
 
 let str = "aabfdgylkjfdhkl;fahndbj";
 
-characterCounter(str);
+let charsArr = characterCounter(str);
+
+for(let c in charsArr)
+{
+  if(charsArr[c] === 1)
+  {
+    console.log(c);
+    break;
+  }
+}
